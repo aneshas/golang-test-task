@@ -119,7 +119,7 @@ func (p *processor) Run(ctx context.Context) {
 }
 
 func conn() (*amqp.Connection, func()) {
-	conn, err := amqp.Dial("amqp://user:password@rabbitmq:7001/")
+	conn, err := amqp.Dial("amqp://user:password@rabbitmq:5672/")
 	check(err)
 
 	return conn, func() {
